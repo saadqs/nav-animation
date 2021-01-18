@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+h2 {
+  position: absolute;
+  top: 38rem;
+  font-size: 1.8rem;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(#43c6ac, #f8ffae);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* NAVBAR */
+
+nav {
+  background-color: #231f20;
+  padding: 2rem;
+  width: 8rem;
+  border-radius: 0.5rem;
+  box-shadow: 0.2rem 0.6rem 0.8rem rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: width 0.7s linear;
+}
+
+nav.active {
+  width: 40rem;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 0;
+  transition: width 0.7s linear;
+}
+
+nav.active ul {
+  width: 100%;
+}
+
+nav ul li {
+  transform: rotateY(0deg);
+  opacity: 0;
+  transition: transform 0.7s linear, opacity 0.7s linear;
+}
+
+nav.active ul li {
+  transform: rotateY(360deg);
+  opacity: 1;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+  position: relative;
+  margin: 0 2rem;
+  font-size: 1.3rem;
+}
+
+/* BUTTON */
+
+button {
+  cursor: pointer;
+  background-color: #231f20;
+  border: none;
+  padding: 0;
+  position: relative;
+  height: 3rem;
+  width: 3rem;
+}
+
+button:focus {
+  outline: none;
+}
+
+button .line {
+  background-color: #43c6ac;
+  height: 0.2rem;
+  width: 2.4rem;
+  position: absolute;
+  top: 1rem;
+  left: 0.5rem;
+  transition: transform 0.7s linear;
+}
+
+button .line2 {
+  top: auto;
+  bottom: 1rem;
+}
+
+nav.active button .line1 {
+  transform: rotate(-760deg) translateY(0.5rem);
+}
+
+nav.active button .line2 {
+  transform: rotate(760deg) translateY(-0.5rem);
+}
